@@ -9,6 +9,9 @@ using namespace std;
 const int PentagonSize = 5;
 int Pentagon[PentagonSize];
 
+/// <summary>
+/// Метод получения длин сторон пятиугольника, запись в массив
+/// </summary>
 void GetPentagonSides() 
 {
     int letter = 65;
@@ -20,6 +23,20 @@ void GetPentagonSides()
     }
 }
 
+/// <summary>
+/// Метод расчёта суммы длин сторон
+/// </summary>
+/// <returns>float сумма длин сторон</returns>
+float CalcSumOfParties() 
+{
+    float result = 0;
+    for (int i = 0; i < PentagonSize; i++)
+    {
+        result += Pentagon[i];
+    }
+
+    return result;
+}
 
 int main()
 {
@@ -33,6 +50,6 @@ int main()
 
     GetPentagonSides();
     
-
+    cout << "Сумма длин сторон пятиугольника = " << CalcSumOfParties() << endl;
 }
 
